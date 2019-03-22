@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+body {
+  background-color: #f7f7f7;
+  margin: 0; 
+}
+
+h1, h2, p, ul, li {
+  font-family: 'Poppins', sans-serif;
+}
+
+.header {
+  background-color: #525252;
+}
+.header a {
+  color: #FFF;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+}
+.content {
+  padding: 20px;
+}
+.content h2 {
+  padding: 0;
+  margin: 0;
+}
+.content li {
+  margin-bottom: 10px;
+}
+
+
+.active {
+  background-color: #ffffff;
+  color: #525252 !important;
+}
+.active svg{
+  fill: #525252;
+}
+.ReactTable{
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+}
+.-headerGroups .rt-th, .headerClient{
+  font-family: 'Poppins', sans-serif;
+  text-align: left;
+  color: #ffffff;
+  background-color: #525252;
+}
+
+.ReactTable .rt-thead .rt-tr{
+  color: #9b9b9b;
+}
+.rt-resizable-header-content{
+  font-weight: bold;
+}
+.ReactTable .rt-thead .rt-th.-sort-desc, .ReactTable .rt-thead .rt-th.-sort-asc{
+  color: #df78d6;
+  box-shadow: none;
+}
+.rt-thead .rt-tr{
+  text-align: left !important;
+}
+
+.headerClient{
+  height: 30px;
+  padding-left: 10px;
+  padding-top: 2px;
+}
+
+.ReactTable .rt-thead .rt-th.-sort-desc .rt-resizable-header-content::after {
+  color:#76e24a;
+  content: " \2193";
+}
+
+.ReactTable .rt-thead .rt-th.-sort-asc .rt-resizable-header-content::after {
+  color:#76e24a;
+  content: " \2191";
+}
+
+
+.headerNav{
+  padding: 0 12% 0 3%;
+  height: 55px;
+  box-shadow: 0 4px 2px -2px #b7b7b7;
+}
+
+.imgLogo{
+  height: 45px;
+}
+
+.mr-auto{
+height: 55px;
+align-items: center;
+}
+
+.mr-auto a{
+  display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 10px
+}
+
+.ReactTable .rt-tbody .rt-td, .ReactTable .rt-thead .rt-th{
+  border-right: none;
+}
+
+.rt-td:first-child, .rt-th:first-child{
+  padding-left: 3% !important;
+}
+
+.rt-th, .rt-td{
+  padding-top: 13px !important; 
+  padding-bottom: 15px !important;
+}
+
+.noTransa{
+  background-color: white;
+    color: #9b9b9b;
+    text-align: center;
+    margin: 1% 0 2% 0;
+}
