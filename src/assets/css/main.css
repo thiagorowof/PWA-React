@@ -59,6 +59,13 @@ h1, h2, p, ul, li {
   color: #df78d6;
   box-shadow: none;
 }
+
+.pinkColor{
+  color: #df78d6 !important;
+  width: 100%;
+  border: none;
+}
+
 .rt-thead .rt-tr{
   text-align: left !important;
 }
@@ -120,4 +127,46 @@ align-items: center;
     color: #9b9b9b;
     text-align: center;
     margin: 1% 0 2% 0;
+}
+
+.btn-secondary{
+  background-color: #76e24a;
+  border-color: #76e24a;
+}
+
+.centerBtn{
+  text-align: center;
+}
+
+.form-control{
+  color:#495057;
+}
+
+.col-md{
+  margin:10px;
+}
+
+
+@media (max-width: 992px) {
+  .mr-auto{
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0 8% 0 0!important;
+    width: 50%;
+  }
+
+  .mr-auto a{
+    width: 100%;
+  }
+
+  .navbar-brand{
+    margin: 0px 0px 0px -8%;
+  }
+}
+
+@media (max-width: 468px) {
+  .mr-auto a{
+    font-size: 12px;
+  }
 }

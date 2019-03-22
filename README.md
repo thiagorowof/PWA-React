@@ -1,5 +1,5 @@
 # PWA-React
-> Um progressive web app (Embora esteja mais no estilo de um SPA) utilizando ReactJs [ReactJS](https://github.com/facebook/create-react-app).
+> Um progressive web app (Embora esteja mais no estilo de um SPA) utilizando [ReactJS](https://github.com/facebook/create-react-app).
 
 A aplicação é um simples sistema de cadastro de transações para uma tela com uma lista das mesmas registradas, podendo organizar e filtrar as transações dessa lista, além de consultar o saldo.
 
@@ -37,6 +37,7 @@ Executar `npm start` ou `yarn start` para levantar um servidor de desenvolviment
 * i18n para multilinguagens?
 * Mudanças de layout? 
 * Utilização de redux + banco?
+* O state deveria ser imutavel, então para corrigir alguns pequenos warnings apenas, ajustar os `this.state.algumaCoisa = umValor` para algo parecido com `this.setState({ algumaCoisa: umValor });`
 
 ## Releases
 

@@ -15,13 +15,10 @@ class AppHeader extends Component {
           <Navbar.Brand href="#">
               <img alt="" src={logo} className="d-inline-block align-top imgLogo"/>
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="mr-auto">
+          <Nav className="mr-auto">
               <NavLink exact to="/">Transação</NavLink>
               <NavLink to="/Dashboard"> Dashboard</NavLink>
             </Nav>
-          </Navbar.Collapse>
         </Navbar>
         
         );

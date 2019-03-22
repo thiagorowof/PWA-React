@@ -26,7 +26,7 @@ class List extends Component {
             {
               Header: "Valor", 
               accessor: "moneyValue",
-              Cell: props => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(props.value)
+              // Cell: props => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(props.value)
             },
             {
               Header: "Descrição", accessor: "desc"

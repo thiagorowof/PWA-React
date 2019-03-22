@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Alert from 'react-bootstrap/Alert'
+import CurrencyInput from 'react-currency-input';
+
 
 
 class Transaction extends Component {
@@ -13,6 +16,7 @@ class Transaction extends Component {
       transactions:[],
       moneyValue: "",
       desc:"",
+      show: false,
     };
     this.getTransationsLocalStorage();
   }
@@ -30,6 +34,7 @@ class Transaction extends Component {
   }
   
   updateInput(key, value) {
+    this.setState({ show: false })
     this.setState({ [key]: value });
   }
 
@@ -41,13 +46,16 @@ class Transaction extends Component {
     };
 
     this.saveTransationToLocalStorage(transaction);
-
+    this.setState({ show: true })
     this.setState({
       transaction:[],
       moneyValue: "",
       desc:""
     });
   }
+
+  handleHide() { this.setState({ show: false })};
+
 
   render() {
     return (
@@ -58,13 +66,20 @@ class Transaction extends Component {
             </Col>
           </Row>
 
-        <div>
-          <input type="text" placeholder="Valor" value={this.state.moneyValue} onChange={e => this.updateInput("moneyValue", e.target.value)}/>
-          <input type="text" placeholder="Descrição" value={this.state.desc} onChange={e => this.updateInput("desc", e.target.value)}/>
-          <button onClick={() => this.addItem()} disabled={!this.state.moneyValue.length || !this.state.desc.length}>
-            Fazer transação
-          </button>
-        </div>
+          <Row>
+            <Col md>
+              <CurrencyInput className="form-control" prefix="R$ " ref="myinput" value={this.state.moneyValue} onChangeEvent={e => this.updateInput("moneyValue", e.target.value)}/>
+            </Col>
+            <Col md>
+              <input className="form-control" type="text" maxLength="20" placeholder="Descrição" value={this.state.desc} onChange={e => this.updateInput("desc", e.target.value)}/>
+            </Col>
+            <Col md className="centerBtn">
+            <button className="btn btn-secondary" onClick={() => this.addItem()} disabled={!this.state.moneyValue.length || !this.state.desc.length}>
+              Fazer transação
+            </button>
+            </Col>
+          </Row>
+          <Alert onClick={() => this.handleHide()} show={this.state.show} variant="success">Transação Adicionada!</Alert>
       </Container>
     );
   }
